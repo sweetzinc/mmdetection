@@ -19,7 +19,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install MMEngine and MMCV
-# https://mmcv.readthedocs.io/en/latest/get_started/installation.html
+# Download the precompiled version to avoid build error: https://mmcv.readthedocs.io/en/latest/get_started/installation.html
 RUN pip install openmim 
 RUN pip install "mmengine" 
 RUN pip install "mmcv==2.0.1" -f https://download.openmmlab.com/mmcv/dist/cu118/torch2.0/index.html
