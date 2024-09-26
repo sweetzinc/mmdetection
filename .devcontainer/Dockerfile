@@ -14,7 +14,8 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install the required packages
 RUN apt-get update \
-    && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 \
+    && apt-get install -y wget unzip zip \
+    ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
